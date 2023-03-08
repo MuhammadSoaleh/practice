@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .maindiv{
+            /* border: ridge blue 5px; */
+        float: left;width: 99.7%;background-color: rgb(102, 243, 102);}
+        nav{
+            /* border: ridge green 5px; */
+            float: left;width: 100%; background-color:rgb(102, 243, 102) ;}
+        ol{color: rgb(102, 243, 102); text-decoration: none; float: left
+            /* ;border: 5px ridge brown; */
+            ;width:70%;margin-left:25%; ;}
+        li{text-decoration: none; text-transform:uppercase ;float: left;margin-left: 150px;color: rgb(102, 243, 102)}
+        a{color: black;text-decoration: none;}
+        a:hover{color: blue;font-size: 15px;}
+         /* body{height:100%;width: 100% ;}  */
+
+         /* THIS IS SLIDE CSS */
+         .mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+*{color:black ;}
+    </style>
+</head>
+<body>
+    
+        <!-- this is header  -->
+        <div class="wrapper">
+            <header style="background-color:rgb(102, 243, 102); "> <center><img style="height: 60px;width: 200px;" src="who care" ></center></header>
+            <!-- this is navigationbar -->
+        <nav><div class="maindiv">
+            
+                <ol><li> <a href="">Home</a></li>
+            <li> <a href="">Contact</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Blog</a></li></ol> </nav></div></nav>
+            <!-- this is slider  -->
+    <div>
+        <!-- <div class="w3-container">
+            <h2>Slideshow Indicators</h2>
+            <p>An example of using buttons to indicate how many slides there are in the slideshow, and which slide the user is currently viewing.</p>
+          </div> -->
+          
+          <div class="w3-content w3-display-container" >
+            <img class="mySlides" src="sale-fabrics" >
+            <img class="mySlides" src="art" >
+            <img class="mySlides" src="moderntype" >
+            <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+              <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+              <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+            </div>
+          </div>
+        </div> 
+       <!-- this is section  -->
+    <section><center><h1>Contact form</h1>
+    <label style="margin: 0px 8px;" for="">Name:</label><input  placeholder="M.xxxx" type="text"><br>
+    <label for="">number:</label><input  placeholder="033xxxxx" type="text"><br>
+    <label style="margin: 0px 8px;" for="">Email:</label><input  placeholder="m.xxxxx@gmail.com" type="text"><br><br>
+    <button>Submit</button></center>
+     </section>
+    <!-- this is aside  -->
+    <aside><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.534049811012!2d67.0630750148813!3d24.981962946529812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb340e584b891c3%3A0x29b2cbc198ba2dbd!2sAptech%20Computer%20Education%20North%20Karachi%20Center!5e0!3m2!1sen!2s!4v1662397555311!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></aside>
+     <!-- this is footer  -->
+    <footer><div>
+      <ol>
+      <li><img src="Facebook-Logo" ><a href="https://www.facebook.com/">Facebook</a></li>
+      <li><img src="instagram-logo" ><a href="https://www.instagram.com/">instagram</a></li>
+      <li><img src="twitter" ><a href="https://www.twitter.com/ ">Twitter</a></li>
+      <li><img src="LinkedIn" ><a href="https://www.linkedin.com/">Linkedin</a></li>
+    </ol></div>
+    </footer> 
+ 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function currentDiv(n) {
+          showDivs(slideIndex = n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" w3-white", "");
+          }
+          x[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " w3-white";
+        }
+        </script>
+</body>
+</html>
